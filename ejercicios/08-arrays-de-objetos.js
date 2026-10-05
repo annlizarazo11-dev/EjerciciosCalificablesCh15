@@ -24,12 +24,12 @@ function resumenInventario(productos) {
   let valorInventario = 0;
   let agotados = [];
 
-  for (let i = 0; i < productos.length; i++) {
-    unidadesTotales = unidadesTotales + productos[i].stock;
-    valorInventario = valorInventario + (productos[i].precio * productos[i].stock);
+  for (let producto = 0; producto < productos.length; producto++) {
+    unidadesTotales = unidadesTotales + productos[producto].stock;
+    valorInventario = valorInventario + (productos[producto].precio * productos[producto].stock);
 
-    if (productos[i].stock === 0) {
-      agotados.push(productos[i].nombre);
+    if (productos[producto].stock === 0) {
+      agotados.push(productos[producto].nombre);
     }
   }
 
